@@ -1,0 +1,28 @@
+.messageWrap {
+    font-size: 1rem;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 15px;
+    width: fit-content;
+    max-width: 80%;
+    text-align: left;
+    word-break: break-word;
+
+    &.message {
+        background-color: rgba(grey, 0.5);
+        border-bottom-right-radius: 0px;
+        align-self: flex-end;
+    }
+    &.response {
+        background-color: rgba(blue, 0.5);
+        border-top-left-radius: 0px;
+        align-self: flex-start;
+    }
+
+    &.announce {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        color: #333;
+    }
+}

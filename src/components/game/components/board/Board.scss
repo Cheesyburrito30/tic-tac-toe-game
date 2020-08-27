@@ -1,0 +1,51 @@
+.single-game-board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    .board-row {
+        display: flex;
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 33.3333%;
+        &:after {
+            clear: both;
+            content: '';
+            display: table;
+        }
+
+        &:nth-child(odd) .square:nth-child(odd),
+        &:nth-child(even) .square:nth-child(even) {
+            background-color: #dddddd;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(black, 0.6);
+    }
+
+    &.o:hover::after {
+        content: 'Winner: O';
+    }
+    &.x:hover::after {
+        content: 'Winner: X';
+    }
+    &.scratch:hover::after {
+        content: 'Scratch';
+    }
+}
